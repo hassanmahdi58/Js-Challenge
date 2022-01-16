@@ -1,7 +1,7 @@
 # Js-Challenge
 # MAIN
 This app browser will run and it will shows you quiz questions with timer , it's 5 questions with mutilple choice and finally you will see your score .mainly consist of hmtl , css and javascript.
-#Screenshots
+# Screenshots
 * Home paige
 ![Screenshot 2022-01-16 at 12 15 56](https://user-images.githubusercontent.com/94930434/149659519-0ec6a7e8-3abf-4968-9ca3-94536729014e.png)
  
