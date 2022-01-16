@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Code Quiz</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> coding challenge</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-
 <body>
-    <header>
-        <ul>
-            <li class="highscores">View Highscores</li>
-            <li class="timer">Time: <p id="timer">0</p> </li>
-        </ul>
-    </header>
+    
 
-    <div id="initial-text">
-    <h1>Quiz yourself on Coding!</h1>
-    <p id="p1">Are you a budding computer programmer? 
-        Take our quiz to see how much you know about the world of coding!.
-        you got 75 seconds for each quiz to finish it.
-        Click the "Start" button to begin the quiz.</p>
+    <div class="info_box">
+        <div class="info-title"><span>Quiz yourself on Coding!</span></div>
+        <div class="card-text">
+            <p> Are you sure you want to Process the quiz?</p>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+    <div class="container" id="quiz">
+        <div class="row">
+        <div class="col-1">
+            <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <h1 class="card-title"> Quiz yourself on Coding!</h1>
+                <p class="card-text"> Are you a budding computer programmer? 
+                    Take our quiz to see how much you know about the world of coding!.
+                    you got 75 seconds for each quiz to finish it.
+                    Click the "Start" button to begin the quiz.
+                    <br>
+                    <br>
+                    <strong>Wish You Luck</strong>
+                    </p>
+            </div>
+            <div>
+                <div>
+    <div class="start_btn">
+        <button>Start Quiz</button></div>
+    
+    <div class="quiz_box">
+        <header>
+            <div class="title">challenge for quiz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                
+            </div>
+            <div class="option_list">
+               
+            </div>
+        </section>
+
+        
+        <footer>
+            <div class="total_que">
+               
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
     </div>
 
-    <ul id="question-List">
+
+    
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">congrats! </div>
+        <div class="score_text">
+      
+        </div>
+        <div class="buttons">
+            <button class="restart"></button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    
+    <script src="css/questions.js"></script>
+
    
-    </ul>
+    <script src="./css/script.js"></script>
 
-    <p id="correct-wrong"> </p>
-    <div id="label-container"></div>
-    <div id="button-container">
-    <button id="start-quiz">Start</button>
-    <div>
-    <div class="initials">
-        <h1 id="initial-text">Highscores</h1>
-    </div>
-
-    <ol id="highscores"></ol>
-
-    <div id="button-container">
-    <button id="go-back">Go Back</button>
-    </div>
-
-    <div id="button-container">
-    <button id="clear">Clear Highscores</button>
-    </div>
-
-  <script src="./css/script.js"></script>
 </body>
-</html> 
+</html>
