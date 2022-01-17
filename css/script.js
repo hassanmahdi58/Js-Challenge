@@ -97,7 +97,7 @@ function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     
-// question div taGs
+// question div tags
     let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
     let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
     + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
@@ -184,22 +184,24 @@ function startTimer(time){
             let addZero = timeCount.textContent; 
             timeCount.textContent = "0" + addZero; 
         }
-        if(time < 0){ 
-            clearInterval(counter); 
-            timeText.textContent = "Time Off"; 
-            const allOptions = option_list.children.length; 
-            let correcAns = questions[que_count].answer; 
+
+
+        if(time < 0){ //if timer is less than 0
+            clearInterval(counter); //clear counter
+            timeText.textContent = "Time Off"; //change the time text to time off
+            const allOptions = option_list.children.length; //getting all option items
+            let correcAns = questions[que_count].answer; //getting correct answer from array
             for(i=0; i < allOptions; i++){
-                if(option_list.children[i].textContent == correcAns){ 
-                    option_list.children[i].setAttribute("class", "option correct"); 
-                    option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); 
+                if(option_list.children[i].textContent == correcAns){ //if there is an option which is matched to an array answer
+                    option_list.children[i].setAttribute("class", "option correct"); //adding green color to matched option
+                    option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to matched option
                     console.log("Time Off: Auto selected correct answer.");
                 }
             }
             for(i=0; i < allOptions; i++){
-                option_list.children[i].classList.add("disabled"); 
+                option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
-            next_btn.classList.add("show"); 
+            next_btn.classList.add("show"); //show the next button if user selected any option
         }
     }
 }
@@ -207,13 +209,15 @@ function startTimer(time){
 function startTimerLine(time){
     counterLine = setInterval(timer, 29);
     function timer(){
-        time += 1; 
-        time_line.style.width = time + "px"; 
-        if(time > 549){ 
-            clearInterval(counterLine); 
+        time += 1; //upgrading time value with 1
+        time_line.style.width = time + "px"; //increasing width of time_line with px by time value
+        if(time > 549){ //if time value is greater than 549
+            clearInterval(counterLine); //clear counterLine
         }
     }
 }
+    
+
 
 function queCounter(index){
     
